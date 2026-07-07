@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bizim Hikayemiz</title>
+  <meta name="description" content="Senin için özel bir site...">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="splash-active">
+
+  <div id="splash" class="splash">
+    <div class="splash-inner">
+      <div class="splash-heart">💕</div>
+      <h1 class="splash-names">EFE & ELİF</h1>
+      <p class="splash-tagline">Bizim Hikayemiz</p>
+      <div class="splash-line"></div>
+      <p class="splash-hint">Dokun ve başla</p>
+    </div>
+  </div>
+
+  <div class="site-content">
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-watermark" aria-hidden="true">
+    <span class="watermark-text">EFE & ELİF</span>
+  </div>
+  <div class="hearts-bg" aria-hidden="true"></div>
+  <div class="sparkles" aria-hidden="true"></div>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <nav>
+    <a href="#hero">Başlangıç</a>
+    <a href="#fotograflar">Fotoğraflar</a>
+    <a href="#muzik">Müzik</a>
+    <a href="#tarihler">Tarihler</a>
+    <a href="#hikaye">Hikayemiz</a>
+    <a href="#ses">Sesli Mesaj</a>
+    <a href="#notlar">Notlar</a>
+    <a href="#final">Sürpriz</a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <p class="hero-names"></p>
+    <div class="hero-heart">💕</div>
+    <h1 class="hero-title"></h1>
+    <p class="hero-subtitle"></p>
+    <p class="hero-date"></p>
+    <div class="counter-box">
+      <div class="counter-item">
+        <span class="counter-num" id="counter-days">0</span>
+        <span class="counter-label">Gün</span>
+      </div>
+      <div class="counter-sep">♥</div>
+      <div class="counter-item">
+        <span class="counter-num" id="counter-hours">0</span>
+        <span class="counter-label">Saat</span>
+      </div>
+      <div class="counter-sep">♥</div>
+      <div class="counter-item">
+        <span class="counter-num" id="counter-mins">0</span>
+        <span class="counter-label">Dakika</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Keşfet</span>
+      <span class="arrow">↓</span>
+    </div>
+  </section>
+
+  <section id="fotograflar">
+    <h2 class="section-title">Anılarımız</h2>
+    <p class="section-subtitle">Her karede bir hikaye, her bakışta bir dünya...</p>
+    <div class="divider"><span>♥</span></div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" aria-label="Önceki fotoğraf">‹</button>
+      <div class="carousel" id="carousel"></div>
+      <button class="carousel-btn next" aria-label="Sonraki fotoğraf">›</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
+
+  <section id="muzik">
+    <h2 class="section-title">Bizim Şarkılarımız</h2>
+    <p class="section-subtitle">Seninle dinlediğimiz melodiler...</p>
+    <div class="divider"><span>♥</span></div>
+
+    <div class="music-now-playing">
+      <div class="album-art-wrap">
+        <img id="album-art" src="" alt="Şarkı kapağı" class="album-art">
+        <div class="album-overlay">
+          <button class="big-play-btn" id="big-play-btn" aria-label="Oynat">▶</button>
+        </div>
+      </div>
+      <div class="now-playing-info">
+        <p class="now-playing-label">Şu an çalıyor</p>
+        <p class="song-dedication" id="song-dedication">—</p>
+      </div>
+    </div>
+
+    <div class="song-grid" id="song-grid"></div>
+    <div id="youtube-player" class="youtube-hidden"></div>
+  </section>
+
+  <section id="tarihler">
+    <h2 class="section-title">Önemli Tarihlerimiz</h2>
+    <p class="section-subtitle">Her tarih, kalbimizde bir iz...</p>
+    <div class="divider"><span>♥</span></div>
+    <div class="milestones" id="milestones"></div>
+  </section>
+
+  <section id="hikaye">
+    <h2 class="section-title">Hikayemiz</h2>
+    <p class="section-subtitle">Kaderin en güzel yazdığı hikaye...</p>
+    <div class="divider"><span>♥</span></div>
+    <div class="story-letter">
+      <div class="story-seal">♥</div>
+      <h3 class="story-title"></h3>
+      <div class="story-text"></div>
+    </div>
+  </section>
+
+  <section id="ses">
+    <h2 class="section-title voice-title"></h2>
+    <p class="section-subtitle voice-subtitle"></p>
+    <div class="divider"><span>♥</span></div>
+    <div class="voice-player">
+      <div class="voice-icon-wrap">
+        <div class="voice-waves" id="voice-waves">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <button class="voice-play-btn" id="voice-play-btn" aria-label="Sesli mesajı oynat">🎙</button>
+      </div>
+      <p class="voice-note" id="voice-note"></p>
+      <p class="voice-hint" id="voice-hint"></p>
+      <audio id="voice-audio" preload="metadata"></audio>
+    </div>
+  </section>
+
+  <section id="notlar">
+    <h2 class="section-title">Sana Notlarım</h2>
+    <p class="section-subtitle">Kalplere dokun, sözlerimi oku...</p>
+    <div class="divider"><span>♥</span></div>
+    <div class="notes-grid" id="notes-grid"></div>
+  </section>
+
+  <section id="final">
+    <div class="final-box">
+      <div class="final-ribbon"></div>
+      <h2></h2>
+      <p></p>
+      <div class="final-signature"></div>
+      <div class="final-heart">💕</div>
+    </div>
+  </section>
+
+  </div><!-- .site-content -->
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
