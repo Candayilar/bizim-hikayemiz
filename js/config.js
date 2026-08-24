@@ -81,6 +81,8 @@ const CONFIG = {
 
 Bizi karşılaştırdı. Hızlı zannettiğimiz şeyler aslında bizim için geç bile kalınmış şeyler. Bizim hikayemiz de böyle başladı.
 
+Birinci ayımızı doldurduk. Her şey çok güzeldi. Daha güzel yarınlara ve anacağımız günlerimiz olsun, hayatım.
+
 Seni seviyorum sevgilim <3`,
   },
 
